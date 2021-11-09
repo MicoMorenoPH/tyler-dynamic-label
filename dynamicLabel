@@ -1,0 +1,8 @@
+
+    public string labelMessage => "You have funds that are out of balance.Please contact support for assistance.";
+
+    public bool messageVisible { get; set; }
+    [DynamicLabel(nameof(labelMessage))]
+    [Visible(nameof(messageVisible))]
+    [InputType(InputTypeAttribute.Label)]
+    public string message { get; set; }
